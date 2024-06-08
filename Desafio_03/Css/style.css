@@ -1,0 +1,258 @@
+/*Mudança no root do navegador para padrão de 10px*/
+:root{
+  font-size: 62.5%;
+  --black-label-color:#4E4958;
+  --black-legend-color: #535971;
+}
+
+/*Reset nos padrões do navegador*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Fundo colorido*/
+body::before{
+  content: '';
+  width: 100%;
+  height: 43.6rem;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  background-color: #293241;
+}
+
+/*Fontes*/
+h1,h2,button,legend{
+  font-family: "Staatliches", sans-serif;
+}
+
+body{
+  background-color: #BFD7E4;
+  font-size: 1.6rem;
+}
+
+#app{
+  width: 75rem;
+
+  margin: auto;
+
+}
+
+header{
+  text-align: center;
+  color: #ffffff;
+  margin-top: 7.7rem;
+}
+
+header h1{
+  font-size: 3.6rem;
+}
+
+header p{
+  font-weight: 300;
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.logo{
+  
+  display: flex;
+  margin: 2.5rem auto 3.2rem auto;
+}
+
+
+form{
+  margin-bottom: 39.2rem;
+  text-align: center;
+  border-radius: 0 0 2rem 2rem;
+  padding: 3.2rem 6.4rem 6.4rem 6.4rem;
+  background-color: #ffffff;
+}
+
+#top{
+  border-radius: 2rem 2rem 0 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  color: #ffffff;
+  height: 13.3rem;
+  width: 100%;
+  background-color: #F67669;
+}
+
+fieldset{
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 3rem;
+  border: none;
+}
+
+fieldset label{
+  margin-bottom: .8rem;
+}
+
+fieldset h2{
+  font-size: 2rem;
+  line-height: 3.4rem;
+  color: var(--black-legend-color);
+}
+
+legend{
+  
+  color: var(--black-legend-color);
+  font-size: 2.4rem;
+}
+hr{
+  margin: .8rem 0 3.2rem 0;
+  border: #e6e6f0 solid 1px;
+  width: 100%;
+}
+
+label,p{
+  font-family: "Poppins", sans-serif;
+  color: var(--black-label-color);
+}
+
+.input-wrapper{
+  
+  display: flex;
+
+  flex-flow: column wrap;
+  
+  align-items: flex-start;
+
+  
+}
+
+input,textarea,select{
+  padding: 1rem;
+  border-radius: .8rem;
+  background-color: #fafafc;
+  border: solid 1px #e6e6f0;
+  height: 5.6rem;
+}
+
+.input-wrapper:nth-child(1){
+  margin-right: 2.2rem;
+}
+
+#name,#surname{
+  width: 30rem;
+
+  margin-bottom: 1.6rem;
+}
+
+#email{
+  width: 62.2rem;
+}
+
+fieldset select{
+
+width: 30rem;
+margin-bottom: 3.1rem;
+padding: 1rem;
+appearance: none;
+background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.64984L5 5.61617L9 1.64984' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+background-repeat: no-repeat;
+background-position: center right 24px;
+
+}
+
+fieldset select option{
+  font-size: 2rem;
+  padding: 1rem;
+
+}
+
+#about_the_mentor{
+  resize: none;
+  padding: 1rem;
+  width: 60.8rem;
+  height: 17rem;
+}
+
+
+#doubts label{
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 3.6rem;
+}
+
+#doubts input{
+
+  position: absolute;
+
+  opacity: 0;
+  
+  width: 24px;
+  height: 24px;
+
+}
+
+#doubts label::before{
+    content: '';
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    background-color: #FAFAFC;
+}
+
+#doubts input:checked + label::before{
+
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+} 
+
+#doubts input:focus + label::before{
+  outline: 2px solid black;
+}
+
+.dt_men{
+  width: 30rem;
+  height: 5.6rem;
+  margin-right: 3.2rem;
+}
+
+input::-webkit-calendar-picker-indicator{
+  display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder{ 
+  visibility: hidden !important;
+}
+
+
+.time_das,.time_ate{
+  width: 14rem;
+  height: 5.6rem;
+}
+
+.time_ate{
+  margin-left: 1rem;
+}
+
+
+.end_page button{
+  margin-top: 6.4rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 2rem;
+  border: 0;
+  padding: 1.3rem 28.6rem;
+  width: 62.2rem;
+  height: 5.1rem;
+  background-color: #F67669;
+}
+
